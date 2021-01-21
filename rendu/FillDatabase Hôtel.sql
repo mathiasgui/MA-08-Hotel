@@ -3,6 +3,7 @@
 
 ---Début Clients---
 SET IDENTITY_INSERT clients ON
+
 insert into Clients (id, Name, Firstname, Phone, Email, Adress, Invoice_id) values (1, 'Gross', 'Cami', '44-994-3701', 'cgross0@creativecommons.org', '6 Longview Alley', 1);
 insert into Clients (id, Name, Firstname, Phone, Email, Adress, Invoice_id) values (2, 'Donizeau', 'Sam', '23-712-1477', 'sdonizeau1@whitehouse.gov', '1 Portage Center', 2);
 insert into Clients (id, Name, Firstname, Phone, Email, Adress, Invoice_id) values (3, 'MacKeever', 'Olly', '83-671-7697', 'omackeever2@mac.com', '57 Mockingbird Terrace', 3);
