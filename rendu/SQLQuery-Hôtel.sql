@@ -48,7 +48,7 @@ CREATE TABLE Reservations (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
   Number int NOT NULL UNIQUE,
   Checkin date  NOT NULL,
-  chekout date NOT NULL,
+  checkout date NOT NULL,
   Numberofpeople int NOT NULL,
   Clients_id int ,	-- FK
   Clients_invoice_id int ,	-- FK
@@ -61,10 +61,10 @@ CREATE TABLE Clients (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
   "Name" VARCHAR(45) NOT NULL,
   Firstname VARCHAR(45) NOT NULL,
-  Phone int NOT NULL UNIQUE,
+  Phone Varchar(60) NOT NULL UNIQUE,
   Email VARCHAR(100) NOT NULL UNIQUE,
   Adress VARCHAR(100)NULL,
-  Invoice_id INT NOT NULL, --FK
+  Invoice_id  INT NOT NULL, --FK
 
   )
   use Hôtel;
@@ -75,7 +75,7 @@ CREATE TABLE Hotels (
   Rooms INT NOT NULL,
   Stars INT NULL,
   Adress VARCHAR(100) NOT NULL,
-  PhoneNumber INT NOT NULL,
+  PhoneNumber Varchar(60) NOT NULL,
   )
   use Hôtel;
 drop table if EXISTS Rooms
@@ -127,7 +127,7 @@ CREATE TABLE "Invoice_has_Services" (
    -- Contraintes référentielles
     USE Hôtel;
 
-
+	
 ALTER TABLE collaborators_has_clients WITH CHECK ADD  CONSTRAINT FK_Hôtel_Clients FOREIGN KEY(Collaborators_id)
 REFERENCES Collaborators(id)
 
@@ -136,7 +136,7 @@ REFERENCES clients(id)
 
 ALTER TABLE Clients WITH CHECK ADD  CONSTRAINT FK_Hôtel_invoice FOREIGN KEY(invoice_id)
 REFERENCES Invoice(id)
-
+alter table clients with check add constraint uniq unique (Invoice_id)
 ALTER TABLE Reservations WITH CHECK ADD  CONSTRAINT FK_Hôtel_Clients1 FOREIGN KEY(clients_id)
 REFERENCES clients(id)
 
@@ -160,9 +160,8 @@ REFERENCES Invoice(id)
 
 ALTER TABLE Invoice_has_services WITH CHECK ADD  CONSTRAINT FK_Hôtel_Services FOREIGN KEY(Services_id)
 REFERENCES Services(id)
-alter table clients add constraint uniq unique (invoice_id)
+
 ALTER TABLE collaborators_has_clients WITH CHECK ADD  CONSTRAINT FK_Hôtels_Clients2 FOREIGN KEY(clients_invoice_id)
 REFERENCES clients(Invoice_id)
-
 ALTER TABLE Reservations WITH CHECK ADD  CONSTRAINT FK_Hôtel_clients4 FOREIGN KEY(clients_invoice_id)
 REFERENCES clients(Invoice_id)
