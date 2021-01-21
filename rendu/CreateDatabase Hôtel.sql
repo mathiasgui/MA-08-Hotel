@@ -93,7 +93,7 @@ CREATE TABLE "Services" (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
   "Description" VARCHAR(450) NOT NULL UNIQUE,
   Price int NOT NULL,
-  Category VARCHAR(50) NULL,
+  Category VARCHAR(500) NULL,
   )
 
     use Hôtel;
