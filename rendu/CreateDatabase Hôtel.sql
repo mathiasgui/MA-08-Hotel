@@ -1,29 +1,29 @@
--- MA-08_H魌el.SQL
+-- MA-08_H么tel.SQL
 -- Date: Janvier 2021
 -- Author: Mathias Guignard & Yoann Bonzon
 -- Goal: Creates a Hotel DB
 
 -- drop database if exists
 USE master ;
-drop database if EXISTS H魌el
+drop database if EXISTS H么tel
  -- Create the Database
 USE master ;  
 GO  
-CREATE DATABASE H魌el  
+CREATE DATABASE H么tel  
 ON   
-( NAME = H魌el,  
-    FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\H魌el.mdf',  
+( NAME = H么tel,  
+    FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\H么tel.mdf',  
     SIZE = 10,  
     MAXSIZE = 50,  
     FILEGROWTH = 5 )  
 LOG ON  
-( NAME = H魌el_log,  
-    FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\H魌el.ldf',  
+( NAME = H么tel_log,  
+    FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\H么tel.ldf',  
     SIZE = 5MB,  
     MAXSIZE = 25MB,  
     FILEGROWTH = 5MB ) ;  
 GO  
-use H魌el;
+use H么tel;
 -- First delete the database if it exists
 drop table if EXISTS Collaborators
 
@@ -35,14 +35,14 @@ CREATE TABLE Collaborators (
   PhoneNumber int NOT NULL UNIQUE,
   AVS int NOT NULL UNIQUE,
   )
-  use H魌el;
+  use H么tel;
 drop table if EXISTS Invoice
 CREATE TABLE Invoice (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
   Number int NOT NULL UNIQUE,
   Amount int NOT NULL,
   )
-  use H魌el;
+  use H么tel;
 drop table if EXISTS Reservations
 CREATE TABLE Reservations (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
@@ -55,7 +55,7 @@ CREATE TABLE Reservations (
   Services_id int	-- FK
 
   )
-  use H魌el;
+  use H么tel;
 drop table if EXISTS Clients
 CREATE TABLE Clients (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
@@ -67,7 +67,7 @@ CREATE TABLE Clients (
   Invoice_id INT NOT NULL, --FK
 
   )
-  use H魌el;
+  use H么tel;
 drop table if EXISTS Hotels
 CREATE TABLE Hotels (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
@@ -77,7 +77,7 @@ CREATE TABLE Hotels (
   Adress VARCHAR(100) NOT NULL,
   PhoneNumber INT NOT NULL,
   )
-  use H魌el;
+  use H么tel;
 drop table if EXISTS Rooms
 CREATE TABLE Rooms (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
@@ -87,7 +87,7 @@ CREATE TABLE Rooms (
   Hotels_id int NOT NULL,
   Reservations_id int NOT NULL
   )
-  use H魌el;
+  use H么tel;
 drop table if EXISTS "Services"
 CREATE TABLE "Services" (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
@@ -96,7 +96,7 @@ CREATE TABLE "Services" (
   Category VARCHAR(50) NULL,
   )
 
-    use H魌el;
+    use H么tel;
 drop table if EXISTS "Collaborators_has_Clients"
 CREATE TABLE "Collaborators_has_Clients" (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
@@ -105,7 +105,7 @@ CREATE TABLE "Collaborators_has_Clients" (
 	  Clients_Invoice_id int	-- FK
   )
 
-      use H魌el;
+      use H么tel;
 drop table if EXISTS "Collaborators_clean_Rooms"
 CREATE TABLE "Collaborators_clean_Rooms" (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
@@ -115,7 +115,7 @@ CREATE TABLE "Collaborators_clean_Rooms" (
 	  )	
   
 	
-      use H魌el;
+      use H么tel;
 drop table if EXISTS "Invoice_has_Services"
 CREATE TABLE "Invoice_has_Services" (
   id INT NOT NULL identity(1,1)  PRIMARY KEY ,
@@ -124,45 +124,45 @@ CREATE TABLE "Invoice_has_Services" (
   )
 
 
-   -- Contraintes r閒閞entielles
-    USE H魌el;
+   -- Contraintes r茅f茅rentielles
+    USE H么tel;
 
 
-ALTER TABLE collaborators_has_clients WITH CHECK ADD  CONSTRAINT FK_H魌el_Clients FOREIGN KEY(Collaborators_id)
+ALTER TABLE collaborators_has_clients WITH CHECK ADD  CONSTRAINT FK_H么tel_Clients FOREIGN KEY(Collaborators_id)
 REFERENCES Collaborators(id)
 
-ALTER TABLE collaborators_has_clients WITH CHECK ADD  CONSTRAINT FK_H魌el_Collaborators FOREIGN KEY(clients_id)
+ALTER TABLE collaborators_has_clients WITH CHECK ADD  CONSTRAINT FK_H么tel_Collaborators FOREIGN KEY(clients_id)
 REFERENCES clients(id)
 
-ALTER TABLE Clients WITH CHECK ADD  CONSTRAINT FK_H魌el_invoice FOREIGN KEY(invoice_id)
+ALTER TABLE Clients WITH CHECK ADD  CONSTRAINT FK_H么tel_invoice FOREIGN KEY(invoice_id)
 REFERENCES Invoice(id)
 
-ALTER TABLE Reservations WITH CHECK ADD  CONSTRAINT FK_H魌el_Clients1 FOREIGN KEY(clients_id)
+ALTER TABLE Reservations WITH CHECK ADD  CONSTRAINT FK_H么tel_Clients1 FOREIGN KEY(clients_id)
 REFERENCES clients(id)
 
 
-ALTER TABLE Rooms WITH CHECK ADD  CONSTRAINT FK_H魌el_Hotels FOREIGN KEY(Hotels_id)
+ALTER TABLE Rooms WITH CHECK ADD  CONSTRAINT FK_H么tel_Hotels FOREIGN KEY(Hotels_id)
 REFERENCES Hotels(id)
 
-ALTER TABLE Rooms WITH CHECK ADD  CONSTRAINT FK_h魌el_reservations FOREIGN KEY(Reservations_id)
+ALTER TABLE Rooms WITH CHECK ADD  CONSTRAINT FK_h么tel_reservations FOREIGN KEY(Reservations_id)
 REFERENCES Reservations(id)
 
 
-ALTER TABLE Collaborators_clean_Rooms WITH CHECK ADD  CONSTRAINT FK_h魌el_collaborators1 FOREIGN KEY(Collaborators_id)
+ALTER TABLE Collaborators_clean_Rooms WITH CHECK ADD  CONSTRAINT FK_h么tel_collaborators1 FOREIGN KEY(Collaborators_id)
 REFERENCES Collaborators(id)
 
-ALTER TABLE Collaborators_clean_Rooms WITH CHECK ADD  CONSTRAINT FK_H魌el_Collaborators2 FOREIGN KEY(Reservations_id)
+ALTER TABLE Collaborators_clean_Rooms WITH CHECK ADD  CONSTRAINT FK_H么tel_Collaborators2 FOREIGN KEY(Reservations_id)
 REFERENCES Reservations(id)
 
 
-ALTER TABLE Invoice_has_Services WITH CHECK ADD  CONSTRAINT FK_H魌el_Invoice1 FOREIGN KEY(Invoice_id)
+ALTER TABLE Invoice_has_Services WITH CHECK ADD  CONSTRAINT FK_H么tel_Invoice1 FOREIGN KEY(Invoice_id)
 REFERENCES Invoice(id)
 
-ALTER TABLE Invoice_has_services WITH CHECK ADD  CONSTRAINT FK_H魌el_Services FOREIGN KEY(Services_id)
+ALTER TABLE Invoice_has_services WITH CHECK ADD  CONSTRAINT FK_H么tel_Services FOREIGN KEY(Services_id)
 REFERENCES Services(id)
 alter table clients add constraint uniq unique (invoice_id)
-ALTER TABLE collaborators_has_clients WITH CHECK ADD  CONSTRAINT FK_H魌els_Clients2 FOREIGN KEY(clients_invoice_id)
+ALTER TABLE collaborators_has_clients WITH CHECK ADD  CONSTRAINT FK_H么tels_Clients2 FOREIGN KEY(clients_invoice_id)
 REFERENCES clients(Invoice_id)
 
-ALTER TABLE Reservations WITH CHECK ADD  CONSTRAINT FK_H魌el_clients4 FOREIGN KEY(clients_invoice_id)
+ALTER TABLE Reservations WITH CHECK ADD  CONSTRAINT FK_H么tel_clients4 FOREIGN KEY(clients_invoice_id)
 REFERENCES clients(Invoice_id)
