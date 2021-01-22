@@ -1,5 +1,12 @@
+--Vue Hôtel.SQL
+-- Date: Janvier 2021
+-- Author: Mathias Guignard & Yoann Bonzon
+-- Goal: Create view in DB
+
+-- utiliser la base de donnée Hôtel
 Use Hôtel
 GO
+-- création d'une vue contenant le nombre d'entrée par table
 CREATE VIEW V_Hôtel AS SELECT * FROM 
 (SELECT COUNT(*) AS "Invoice" FROM Invoice) as Invoice,
 (SELECT COUNT(*) AS "Clients" FROM Clients) as Clients,

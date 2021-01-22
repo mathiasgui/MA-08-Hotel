@@ -1,4 +1,4 @@
--- FillDatabaseHôtel.SQL
+-- FillDatabase Hôtel.SQL
 -- Date: Janvier 2021
 -- Author: Mathias Guignard & Yoann Bonzon
 -- Goal: Insert Data in DB
