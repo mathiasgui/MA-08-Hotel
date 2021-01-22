@@ -10,3 +10,5 @@ dans le dossier [rendu](https://github.com/mathiasgui/MA-08-Hotel/tree/master/re
 * [Le MCD](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/MCD%20H%C3%B4tel.pdf)
 * [Le MLD](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/MLD%20H%C3%B4tel.pdf)
 
+La planification est disponible dans [Projects](https://github.com/mathiasgui/MA-08-Hotel/projects)
+
