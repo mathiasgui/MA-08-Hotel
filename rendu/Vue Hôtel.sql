@@ -1,4 +1,5 @@
-
+Use Hôtel
+GO
 CREATE VIEW V_Hôtel AS SELECT * FROM 
 (SELECT COUNT(*) AS "Invoice" FROM Invoice) as Invoice,
 (SELECT COUNT(*) AS "Clients" FROM Clients) as Clients,
