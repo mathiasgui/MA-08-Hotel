@@ -1,3 +1,8 @@
+-- FillDatabaseHôtel.SQL
+-- Date: Janvier 2021
+-- Author: Mathias Guignard & Yoann Bonzon
+-- Goal: Insert Data in DB
+
 
 ---Injection de nos Donnés dans la base de donnés de l'Hôtel---
 Use Hôtel

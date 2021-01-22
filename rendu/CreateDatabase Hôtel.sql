@@ -1,4 +1,4 @@
--- MA-08_Hôtel.SQL
+-- CreateDatabase Hôtel.SQL
 -- Date: Janvier 2021
 -- Author: Mathias Guignard & Yoann Bonzon
 -- Goal: Creates a Hotel DB
