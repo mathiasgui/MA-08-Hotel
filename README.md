@@ -1,10 +1,10 @@
 # MA-08-Hotel
-Rendu de Notre base de donnée d'un Hôtel du cours MA-08 par [Yoann Bonzon](https://github.com/yovatar) et [Mathias Guignard](github.com/mathiasgui)
+Rendu de Notre base de données d'un Hôtel du cours MA-08 par [Yoann Bonzon](https://github.com/yovatar) et [Mathias Guignard](github.com/mathiasgui)
 
 dans le dossier [rendu](https://github.com/mathiasgui/MA-08-Hotel/tree/master/rendu) vous trouverez:
 * [Le cahier des charges](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/CDC%20-H%C3%B4tel.pdf)
-* [Le script de création de la base de donnée](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/CreateDatabase%20H%C3%B4tel.sql)
-* [le script d'insertion de donnée](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/FillDatabase%20H%C3%B4tel.sql)
+* [Le script de création de la base de données](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/CreateDatabase%20H%C3%B4tel.sql)
+* [le script d'insertion de données](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/FillDatabase%20H%C3%B4tel.sql)
 * [Le script pour créer la vue](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/Vue%20H%C3%B4tel.sql)
 * [le script contenant les requêtes SELECT](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/SELECT%20H%C3%B4tel.sql)
 * [Le MCD](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/MCD%20H%C3%B4tel.pdf)
