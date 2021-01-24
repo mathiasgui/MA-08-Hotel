@@ -9,6 +9,6 @@ dans le dossier [rendu](https://github.com/mathiasgui/MA-08-Hotel/tree/master/re
 * [le script contenant les requêtes SELECT](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/SELECT%20H%C3%B4tel.sql)
 * [Le MCD](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/MCD%20H%C3%B4tel.pdf)
 * [Le MLD](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/MLD%20H%C3%B4tel.pdf)
-
+* [La documentation](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/Documentation%20H%C3%B4tel.pdf)
 La planification est disponible dans [Projects](https://github.com/mathiasgui/MA-08-Hotel/projects)
 
