@@ -1,5 +1,5 @@
 # MA-08-Hotel
-Rendu de Notre base de donnée d'un Hôtel du cours MA-08 par Yoann et Mathias
+Rendu de Notre base de donnée d'un Hôtel du cours MA-08 par [Yoann Bonzon](https://github.com/yovatar) et [Mathias Guignard](github.com/mathiasgui)
 
 dans le dossier [rendu](https://github.com/mathiasgui/MA-08-Hotel/tree/master/rendu) vous trouverez:
 * [Le cahier des charges](https://github.com/mathiasgui/MA-08-Hotel/blob/master/rendu/CDC%20-H%C3%B4tel.pdf)
